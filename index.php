@@ -4,19 +4,19 @@ $is_auth = rand(0, 1);
 $user_name = ''; // укажите здесь ваше имя
 $user_avatar = 'img/user.jpg';
 $number = 900;
-function form($chislo) {
-   $chislo = ceil($chislo);
-   if ($chislo < 1000) {
-     $chislo;
+function form($num) {
+   $num = ceil($num);
+   if ($num < 1000) {
+     $num;
    } else {
-        if ($chislo > 1000) {
-        $chislo = number_format($chislo, 0, ' ', ' ');
+        if ($num > 1000) {
+        $num = number_format($num, 0, ' ', ' ');
         }
    }
-   $chislo .=" ₽";
-   return $chislo;
+   $num .=" ₽";
+   return $num;
 }
-$num = form($number);
+$first = form($number);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -76,7 +76,7 @@ $num = form($number);
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$num?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?=$first?><b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
