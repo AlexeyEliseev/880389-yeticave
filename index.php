@@ -3,6 +3,22 @@ $is_auth = rand(0, 1);
 
 $user_name = 'Алексей'; // укажите здесь ваше имя
 $user_avatar = 'img/user.jpg';
+
+
+function form($num) {
+   $num = ceil($num);
+   if ($num < 1000) {
+     $num;
+   } else {
+        if ($num > 1000) {
+        $num = number_format($num, 0, ' ', ' ');
+        }
+   }
+   $num .=" ₽";
+   return $num;
+}
+
+
 $categories = ["Доски и лыжи","Крепления","Ботинки","Одежда","Инструменты", "Разное"];
 $firstDoc = [
     'name' => '2014 Rossignol District Snowboard',
@@ -41,6 +57,7 @@ $sixthDoc = [
     'lot__category' => 'Разное',
 ];
 $lots = [$firstDoc,$secondDoc,$thirdDoc,$fourthDoc,$fifthDoc,$sixthDoc,];
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -121,7 +138,9 @@ $lots = [$firstDoc,$secondDoc,$thirdDoc,$fourthDoc,$fifthDoc,$sixthDoc,];
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$value['cost'];?><b class="rub">р</b></span>
+
+                            <span class="lot__cost"><?=$first?><b class="rub">р</b></span>
+
                         </div>
                         <div class="lot__timer timer">
                             12:23
