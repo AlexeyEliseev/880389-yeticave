@@ -1,3 +1,12 @@
+<?php 
+date_default_timezone_set("Europe/Moscow");
+$now = time("now");
+$tmrrw = strtotime("tomorrow");
+$average = $tmrrw - $now;
+$hr = floor($average / 3600);
+$mt = floor(($average % 3600)/60);
+$lot_timer = "$hr:$mt";
+?>
     <section class="promo">
         <h2 class="promo__title">Нужен стафф для катки?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
@@ -32,7 +41,7 @@
                             <span class="lot__cost"><?=htmlspecialchars(form($value['cost']));?><b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?=$lot_timer;?>
                         </div>
                     </div>
                 </div>
