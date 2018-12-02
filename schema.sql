@@ -11,12 +11,6 @@ CREATE TABLE users (
 	password  			CHAR(64) NOT NULL,
 	avatar				CHAR(128),
 	info				CHAR(128),
-
-	lots_id				INT,
-	rates_id			INT,
-
-	FOREIGN KEY (lots_id) REFERENCES lots(id),
-	FOREIGN KEY (rates_id) REFERENCES rates(id)
 );
 
 CREATE TABLE categories (
