@@ -6,7 +6,7 @@ USE yeticave;
 
 CREATE TABLE users (
 	id		  			INT AUTO_INCREMENT PRIMARY KEY,
-	registrationdate
+	registrationdate	DATE,
 	email     			CHAR(128) NOT NULL UNIQUE,
 	password  			CHAR(64) NOT NULL,
 	avatar				CHAR(128),
