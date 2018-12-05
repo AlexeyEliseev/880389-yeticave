@@ -42,4 +42,14 @@ VALUES ( 800, 1, 6);
 
 SELECT * FROM categories; --получаем все категории
 
+SELECT * FROM lots
+WHERE enddate < NOW(); 	  --получить самые новые, открытые лоты
 
+SELECT l.id, lotname, name FROM lots l     --показать лот по его id и получить также название категории, к которой принадлежит лот
+JOIN categories c
+ON l.categorie_id = c.id;
+
+UPDATE lots SET lotname = ''  --обновить название лота по его идентификатору
+WHERE id = ;
+
+SELECT IDENT_CURRENT('rates');	--получить список самых свежих ставок для лота по его идентификатору
