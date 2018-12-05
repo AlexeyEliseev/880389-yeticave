@@ -42,14 +42,11 @@ $user_avatar = 'img/user.jpg';
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container"> 
-            <?php $index = 0; 
-                  $num = count($categories);
-                  while ($index < $num): ?>
-            <li class="nav__item">
-                <a href="pages/all-lots.html"><?=$categories[$index]; ?></a>
-            </li>
-            <?php $index++; ?>
-            <?php endwhile; ?>
+            <?php foreach($categories_sql as $item): ?> 
+            <li class="nav__item"> 
+                <a href="pages/all-lots.html"><?=$item[name];?></a>
+            </li> 
+            <?php endforeach; ?> 
         </ul>
     </nav>
     <div class="main-footer__bottom container">
