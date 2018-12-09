@@ -21,7 +21,7 @@ CREATE TABLE categories (
 CREATE TABLE lots (
 	id             INT AUTO_INCREMENT PRIMARY KEY,
 	createdate     DATE,
-	name           CHAR(64),
+	lotname        CHAR(64),
 	description    CHAR(128),
 	image		   CHAR(128),
 	cost           INT,
