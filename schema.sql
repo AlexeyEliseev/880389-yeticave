@@ -32,7 +32,7 @@ CREATE TABLE lots (
 	winner_id	   INT,
 	categorie_id   INT,
 	FOREIGN KEY (user_id) REFERENCES users(id),
-	FOREIGN KEY (winner_id) REFERENCES users(id)
+	FOREIGN KEY (winner_id) REFERENCES users(id),
 	FOREIGN KEY (categorie_id) REFERENCES categories(id)      
 );
 
