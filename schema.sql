@@ -9,6 +9,7 @@ CREATE TABLE users (
 	registrationdate	DATE,
 	email     			CHAR(128) NOT NULL UNIQUE,
 	password  			CHAR(64) NOT NULL,
+	name				CHAR(128),
 	avatar				CHAR(128),
 	info				CHAR(128),
 );
