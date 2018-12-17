@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $lot['image'] = $filename;
         move_uploaded_file($_FILES['lot_img']['tmp_name'], '/img' . $filename);
 
-        $sql_add = 'INSERT INTO lots (dt_add, categorie_id, user_id, lotname, description, image) VALUES (NOW(), ?, 1, ?, ?, ?)';
+        $sql_add = 'INSERT INTO lots (createdate, categorie_id, user_id, lotname, description, image) VALUES (NOW(), ?, 1, ?, ?, ?)';
 
         $stmt = db_get_prepare_stmt($con, $sql_add, [$lot['category'], $lot['name'], $lot['description'], $lot['image']]);
         $res = mysqli_stmt_execute($stmt);
