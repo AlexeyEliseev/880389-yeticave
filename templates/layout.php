@@ -32,7 +32,7 @@ $user_avatar = 'img/user.jpg';
                     <a href="registration.php">Регистрация</a>
                 </li>
                 <li class="user-menu__item">
-                    <a href="login.html">Вход</a>
+                    <a href="sign_in.php">Вход</a>
                 </li>
             </ul>
         <!-- здесь должен быть PHP код для показа аватара пользователя -->
